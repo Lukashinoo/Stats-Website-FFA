@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>NoRisk Leaderboard & Details</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDQqQb7xQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="icon" type="image/x-icon" href="hglabor.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="leaderboard-container">
+    <header>
+      <img src="norisk-logo.png" alt="NoRisk Relaxo Logo" class="norisk-logo" />
+      <h1>NoRisk Leaderboard</h1>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="playerInput" placeholder="Spielername eingeben" />
+      <button id="searchBtn">Suchen</button>
+    </div>
+
+    <table id="leaderboard">
+      <colgroup>
+        <col style="width: 10%;" />
+        <col style="width: 20%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th data-sort="rank">Rang</th>
+          <th data-sort="playerName">Spieler</th>
+          <th data-sort="kills">Kills</th>
+          <th data-sort="deaths">Deaths</th>
+          <th data-sort="highestKillStreak">Highest<br>Kill Streak</th>
+          <th data-sort="xp">XP</th>
+          <th data-sort="currentKillStreak">Current<br>Kill Streak</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="player-detail-container" id="playerDetail">
+    <button class="back-btn" id="backBtn">
+      <i class="fa-solid fa-arrow-left"></i> Zurück
+    </button>
+    <header>
+      <img src="norisk-logo.png" alt="NoRisk Relaxo Logo" class="norisk-logo" />
+    </header>
+    <div class="detail-content">
+      <img id="detailSkin" class="detail-skin" src="" alt="Skin" />
+      <h2 id="detailName"></h2>
+      <p class="detail-uuid" id="detailUUID"></p>
+
+      <div class="detail-stats">
+        <div class="stats-box">
+          <h3>Allgemein</h3>
+          <div class="stat-line">
+            <span>Kills:</span>
+            <span id="detailKills">0</span>
+          </div>
+          <div class="stat-line">
+            <span>Deaths:</span>
+            <span id="detailDeaths">0</span>
+          </div>
+          <div class="stat-line">
+            <span>XP:</span>
+            <span id="detailXP">0</span>
+          </div>
+        </div>
+        <div class="stats-box">
+          <h3>Kampf</h3>
+          <div class="stat-line">
+            <span>HighestStreak:</span>
+            <span id="detailHighestStreak">0</span>
+          </div>
+          <div class="stat-line">
+            <span>CurrentStreak:</span>
+            <span id="detailCurrentStreak">0</span>
+          </div>
+          <div class="stat-line">
+            <span>KD:</span>
+            <span id="detailKD">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="apps.js"></script>
+</body>
+</html>
