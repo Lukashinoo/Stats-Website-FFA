@@ -2,23 +2,20 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>NoRisk Leaderboard & Details</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDQqQb7xQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <title>NoRisk Leaderboard</title>
   <link rel="icon" type="image/x-icon" href="hglabor.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <audio id="clickSound" src="click-sound.mp3"></audio>
+  <audio id="loadSound" src="load-sound.mp3"></audio>
+  <audio id="animationSound" src="animation-sound.mp3"></audio>
 
   <div class="leaderboard-container">
     <header>
       <img src="norisk-logo.png" alt="NoRisk Relaxo Logo" class="norisk-logo" />
-      <h1>NoRisk Leaderboard</h1>
+      <h1>Leaderboard</h1>
     </header>
 
     <div class="search-container">
@@ -49,6 +46,13 @@
       </thead>
       <tbody></tbody>
     </table>
+
+    <button id="loadMoreBtn" class="load-more-btn">Mehr laden</button>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </div>
 
   <div class="player-detail-container" id="playerDetail">
@@ -60,7 +64,7 @@
     </header>
     <div class="detail-content">
       <img id="detailSkin" class="detail-skin" src="" alt="Skin" />
-      <h2 id="detailName"></h2>
+      <h2 id="detailName" class="detail-name"></h2>
       <p class="detail-uuid" id="detailUUID"></p>
 
       <div class="detail-stats">
@@ -97,6 +101,7 @@
       </div>
     </div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
